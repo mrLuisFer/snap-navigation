@@ -1,0 +1,19 @@
+:root {
+  font-size: 18px;
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+
+html {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  box-sizing: inherit;
+  font-size: 1rem;
+  font-family: 'Epilogue', sans-serif;
+  padding: 0;
+  margin: 0;
+}
