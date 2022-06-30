@@ -9,7 +9,7 @@
 
   const items = [
     {icon: iconTodolist, value: 'Todo List'},
-    {icon: iconCalendar, value: 'Todo List'},
+    {icon: iconCalendar, value: 'Calendar'},
     {icon: iconReminder, value: 'Reminders'},
     {icon: iconPlanning, value: 'Planning'},
   ];

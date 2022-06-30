@@ -1,7 +1,7 @@
 <script>
   import {slide} from 'svelte/transition';
 
-  const items = ['Todo List', 'Todo List', 'Reminders', 'Planning'];
+  const items = ['History', 'Our Team', 'Blog'];
 
   let showList = false;
   const handleToggleList = () => {

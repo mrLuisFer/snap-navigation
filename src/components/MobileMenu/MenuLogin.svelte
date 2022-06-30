@@ -18,6 +18,11 @@
     user-select: none;
   }
 
+  .menu-login p:hover {
+    color: var(--almost-black);
+    transition: 0.1s ease;
+  }
+
   .menu-login-btn {
     width: 100%;
     display: block;

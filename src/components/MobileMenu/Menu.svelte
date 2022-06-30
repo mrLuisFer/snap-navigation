@@ -9,6 +9,8 @@
   const handleCloseMenu = () => {
     showMenu = false;
   };
+
+  $: document.body.style.overflowY = showMenu ? 'hidden' : 'auto';
 </script>
 
 <section class="menu">
