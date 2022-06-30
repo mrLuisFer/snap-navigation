@@ -1,5 +1,6 @@
 <script>
   import {onMount, onDestroy} from 'svelte';
+  import {slide, fade} from 'svelte/transition';
 
   export let target = globalThis.document.body;
 
@@ -20,7 +21,12 @@
   });
 </script>
 
-<div class="portal" bind:this={ref}>
+<div
+  class="portal"
+  bind:this={ref}
+  in:fade={{duration: '200'}}
+  out:slide={{duration: '300'}}
+>
   <div class="portal-shadow" />
   <slot />
 </div>

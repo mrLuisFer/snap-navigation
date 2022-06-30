@@ -1,5 +1,4 @@
 {
   "bracketSpacing": false,
-  "singleQuote": true,
-  "svelteSortOrder": "scripts-markup-styles"
+  "singleQuote": true
 }

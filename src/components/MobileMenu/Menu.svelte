@@ -1,4 +1,5 @@
 <script>
+  import MenuItem from './MenuItem.svelte';
   export let showMenu = false;
 
   const handleCloseMenu = () => {
@@ -10,9 +11,11 @@
   <div class="menu-close" on:click={handleCloseMenu}>
     <img src="/images/icon-close-menu.svg" alt="Close menu" />
   </div>
-  <div>
-    <p>Features</p>
-    <img src="/images/icon-arrow-down.svg" alt="Expand" />
+  <div class="menu-list">
+    <MenuItem withExpand>Features</MenuItem>
+    <MenuItem withExpand>Company</MenuItem>
+    <MenuItem>Careers</MenuItem>
+    <MenuItem>About</MenuItem>
   </div>
 </section>
 
@@ -20,11 +23,18 @@
   .menu {
     height: 100%;
     background: var(--almost-white);
-    padding: 1rem 10px 0 10px;
+    padding: 1rem 1rem 10px;
   }
 
   .menu-close {
     display: flex;
     justify-content: flex-end;
+  }
+
+  .menu-list {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 </style>

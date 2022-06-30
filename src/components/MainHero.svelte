@@ -6,6 +6,7 @@
     src="/images/image-hero-mobile.png"
     alt="Hero mobile"
     class="hero-mobile"
+    draggable="false"
   />
 </div>
 <section class="hero-content">
@@ -20,6 +21,7 @@
 <style>
   .hero-mobile {
     width: 100%;
+    user-select: none;
   }
 
   .hero-content {
@@ -48,5 +50,14 @@
     outline: none;
     border: none;
     margin: 1rem auto 2rem;
+    border: 1px solid;
+    border-color: transparent;
+    transition: 0.15s ease;
+  }
+
+  .hero-content-btn:hover {
+    background-color: var(--almost-white);
+    color: var(--almost-black);
+    border-color: var(--almost-black);
   }
 </style>
