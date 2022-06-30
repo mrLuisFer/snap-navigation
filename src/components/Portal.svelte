@@ -21,12 +21,7 @@
   });
 </script>
 
-<div
-  class="portal"
-  bind:this={ref}
-  in:fade={{duration: '200'}}
-  out:slide={{duration: '300'}}
->
+<div class="portal" bind:this={ref} transition:slide={{duration: '200'}}>
   <div class="portal-shadow" />
   <slot />
 </div>

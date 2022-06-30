@@ -1,5 +1,6 @@
 <script>
   import MenuItem from './MenuItem.svelte';
+  import FeaturesExpandList from '../ExpandList/Features.svelte';
   export let showMenu = false;
 
   const handleCloseMenu = () => {
@@ -12,10 +13,16 @@
     <img src="/images/icon-close-menu.svg" alt="Close menu" />
   </div>
   <div class="menu-list">
-    <MenuItem withExpand>Features</MenuItem>
+    <FeaturesExpandList>
+      <MenuItem withExpand>Features</MenuItem>
+    </FeaturesExpandList>
     <MenuItem withExpand>Company</MenuItem>
     <MenuItem>Careers</MenuItem>
     <MenuItem>About</MenuItem>
+  </div>
+  <div class="menu-login">
+    <p>Login</p>
+    <button>Register</button>
   </div>
 </section>
 
