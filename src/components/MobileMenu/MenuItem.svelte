@@ -19,5 +19,10 @@
     color: var(--medium-gray);
     font-size: 0.9rem;
     user-select: none;
+    transition: 0.15s ease;
+  }
+
+  .menu-item:hover {
+    color: var(--almost-black);
   }
 </style>

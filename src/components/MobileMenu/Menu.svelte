@@ -1,6 +1,8 @@
 <script>
   import MenuItem from './MenuItem.svelte';
   import FeaturesExpandList from '../ExpandList/Features.svelte';
+  import CompanyExpandList from '../ExpandList/Company.svelte';
+
   export let showMenu = false;
 
   const handleCloseMenu = () => {
@@ -16,7 +18,9 @@
     <FeaturesExpandList>
       <MenuItem withExpand>Features</MenuItem>
     </FeaturesExpandList>
-    <MenuItem withExpand>Company</MenuItem>
+    <CompanyExpandList>
+      <MenuItem withExpand>Company</MenuItem>
+    </CompanyExpandList>
     <MenuItem>Careers</MenuItem>
     <MenuItem>About</MenuItem>
   </div>
