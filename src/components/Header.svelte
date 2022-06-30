@@ -1,6 +1,4 @@
 <script>
-  import Menu from './Menu.svelte';
-
   export let showMenu = false;
 
   const handleShowMenu = () => {
@@ -8,9 +6,6 @@
   };
 </script>
 
-{#if showMenu}
-  <Menu bind:showMenu />
-{/if}
 <header class="header">
   <a href="/">
     <img src="/images/logo.svg" alt="Snap" />

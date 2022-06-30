@@ -18,10 +18,7 @@
 
 <style>
   .menu {
-    position: absolute;
-    right: 0;
-    height: 100vh;
-    width: 50%;
+    height: 100%;
     background: var(--almost-white);
     padding: 1rem 10px 0 10px;
   }
