@@ -2,6 +2,7 @@
   import MenuItem from './MenuItem.svelte';
   import FeaturesExpandList from '../ExpandList/Features.svelte';
   import CompanyExpandList from '../ExpandList/Company.svelte';
+  import MenuLogin from './MenuLogin.svelte';
 
   export let showMenu = false;
 
@@ -24,10 +25,7 @@
     <MenuItem>Careers</MenuItem>
     <MenuItem>About</MenuItem>
   </div>
-  <div class="menu-login">
-    <p>Login</p>
-    <button>Register</button>
-  </div>
+  <MenuLogin />
 </section>
 
 <style>

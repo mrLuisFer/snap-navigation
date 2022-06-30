@@ -21,9 +21,11 @@
   });
 </script>
 
-<div class="portal" bind:this={ref} transition:slide={{duration: '200'}}>
-  <div class="portal-shadow" />
-  <slot />
+<div class="portal" bind:this={ref}>
+  <div class="portal-shadow" transition:fade={{duration: '150'}} />
+  <div transition:slide={{duration: '200'}}>
+    <slot />
+  </div>
 </div>
 
 <style>
@@ -33,7 +35,7 @@
     right: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 120px 1fr;
     height: 100vh;
   }
 
