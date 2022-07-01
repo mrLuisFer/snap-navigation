@@ -28,14 +28,15 @@
     display: block;
     padding: 0.8rem 0;
     border-radius: 15px;
-    border: 1.5px solid var(--almost-black);
-    color: var(--medium-gray);
-    transition: 0.15s ease;
+    border: 2px solid var(--almost-black);
+    transition: opacity 0.15s ease;
     margin-top: 0.5rem;
+    color: var(--almost-black);
+    opacity: 0.5;
   }
 
   .menu-login-btn:hover {
-    color: var(--almost-black);
+    opacity: 1;
   }
 
   @media (min-width: 900px) {

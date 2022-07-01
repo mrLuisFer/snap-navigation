@@ -3,17 +3,23 @@
 </script>
 
 <div class="main-hero">
-  <div>
+  <div class="main-hero-img">
     <img
       src="/images/image-hero-mobile.png"
       alt="Hero mobile"
       class="hero-mobile"
       draggable="false"
     />
+    <img
+      src="/images/image-hero-desktop.png"
+      alt="Hero mobile"
+      class="hero-desktop"
+      draggable="false"
+    />
   </div>
-  <div>
+  <div class="hero-content-container">
     <section class="hero-content">
-      <h1 class="hero-content-title">Make remote work</h1>
+      <h1 class="hero-content-title">Make <span>remote work</span></h1>
       <p class="hero-content-text">
         Get your team in async, no matter your location. Streamline processes,
         create team rituals, and watch productivity soar.
@@ -67,11 +73,51 @@
     border-color: var(--almost-black);
   }
 
-
   @media (min-width: 900px) {
     .main-hero {
-      display: flex;
-      flex-direction: row-reverse;
+      padding: 2.5rem 6rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: column;
+      gap: 5rem;
+    }
+
+    .main-hero-img {
+      grid-column: 2;
+    }
+
+    .hero-content-container {
+      grid-column: 1;
+    }
+
+    .hero-content {
+      text-align: left;
+    }
+
+    .hero-content-title {
+      font-size: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .hero-content-title span {
+      display: block;
+    }
+
+    .hero-content-text {
+      max-width: 400px;
+      line-height: 1.8;
+    }
+
+    .hero-content-btn {
+      margin: 5rem 0 7.5rem;
+    }
+
+    .hero-mobile {
+      display: none;
+    }
+
+    .hero-desktop {
+      max-width: 500px;
     }
   }
 </style>

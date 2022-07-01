@@ -9,7 +9,7 @@
 
 <div class="companies-container">
   {#each companies as companyLogo}
-    <img src={companyLogo} alt="random" class="companies-logo" />
+    <img src={companyLogo} alt="random" draggable="false" class="companies-logo" />
   {/each}
 </div>
 
@@ -30,5 +30,14 @@
 
   .companies-logo:hover {
     transform: scale(1.1);
+  }
+
+
+  @media (min-width: 900px) {
+    .companies-container {
+      justify-content: flex-start;
+      column-gap: 2.5rem;
+      align-items: center;
+    }
   }
 </style>
