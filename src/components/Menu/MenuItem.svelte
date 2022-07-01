@@ -45,4 +45,10 @@
     transform: rotate(0deg);
     transition: 0.2s ease;
   }
+
+  @media (min-width: 900px) {
+    .menu-item {
+      
+    }
+  }
 </style>

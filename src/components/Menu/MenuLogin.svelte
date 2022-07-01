@@ -37,4 +37,19 @@
   .menu-login-btn:hover {
     color: var(--almost-black);
   }
+
+  @media (min-width: 900px) {
+    .menu-login {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      gap: 2rem;
+      font-size: 0.85rem;
+    }
+
+    .menu-login-btn {
+      padding: 0.6rem 1rem;
+      border-radius: 13px;
+    }
+  }
 </style>

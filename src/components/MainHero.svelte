@@ -1,22 +1,28 @@
 <script>
+  import Companies from './CompaniesLogos.svelte';
 </script>
 
-<div>
-  <img
-    src="/images/image-hero-mobile.png"
-    alt="Hero mobile"
-    class="hero-mobile"
-    draggable="false"
-  />
+<div class="main-hero">
+  <div>
+    <img
+      src="/images/image-hero-mobile.png"
+      alt="Hero mobile"
+      class="hero-mobile"
+      draggable="false"
+    />
+  </div>
+  <div>
+    <section class="hero-content">
+      <h1 class="hero-content-title">Make remote work</h1>
+      <p class="hero-content-text">
+        Get your team in async, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
+    </section>
+    <button class="hero-content-btn">Learn more</button>
+    <Companies />
+  </div>
 </div>
-<section class="hero-content">
-  <h1 class="hero-content-title">Make remote work</h1>
-  <p class="hero-content-text">
-    Get your team in async, no matter your location. Streamline processes,
-    create team rituals, and watch productivity soar.
-  </p>
-</section>
-<button class="hero-content-btn">Learn more</button>
 
 <style>
   .hero-mobile {
@@ -59,5 +65,13 @@
     background-color: var(--almost-white);
     color: var(--almost-black);
     border-color: var(--almost-black);
+  }
+
+
+  @media (min-width: 900px) {
+    .main-hero {
+      display: flex;
+      flex-direction: row-reverse;
+    }
   }
 </style>

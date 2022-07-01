@@ -19,20 +19,22 @@
   };
 </script>
 
-<div>
+<div class="container">
   <div on:click={handleToggleList}><slot /></div>
   {#if showList}
-    {#each items as item}
-      <div class="list-container" transition:slide={{duration: '200'}}>
-        <img src={item.icon} class="list-img" alt={item.value} />
-        <p class="list-text">{item.value}</p>
-      </div>
-    {/each}
+    <div class="list-container">
+      {#each items as item}
+        <div class="list-item" transition:slide={{duration: '200'}}>
+          <img src={item.icon} class="list-img" alt={item.value} />
+          <p class="list-text">{item.value}</p>
+        </div>
+      {/each}
+    </div>
   {/if}
 </div>
 
-<style>
-  .list-container {
+<style global>
+  :global(.list-item) {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -40,18 +42,42 @@
     margin: 1.5rem 0 0 1rem;
   }
 
-  .list-container img {
+  .list-item img {
     width: 17px;
     height: 17px;
   }
 
-  .list-container:hover {
+  :global(.list-item:hover) {
     color: var(--almost-black);
   }
 
-  .list-text {
+  :global(.list-text) {
     margin: 0;
     cursor: default;
     font-size: 0.9rem;
+  }
+
+  @media (min-width: 900px) {
+    :global(.container) {
+      position: relative;
+    }
+
+    :global(.list-container) {
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      top: 30px;
+      right: 0;
+      padding: 0 1rem;
+      min-width: 80px;
+    }
+
+    :global(.list-item) {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
   }
 </style>
