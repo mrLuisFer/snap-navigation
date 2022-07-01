@@ -38,6 +38,8 @@
 
   .menu-login-btn:hover {
     opacity: 1;
+    color: var(--almost-white);
+    background: var(--almost-black);
   }
 
   @media (min-width: 900px) {
