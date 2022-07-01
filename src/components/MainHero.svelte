@@ -36,6 +36,10 @@
     user-select: none;
   }
 
+  .hero-desktop {
+    display: none;
+  }
+
   .hero-content {
     text-align: center;
   }
@@ -61,7 +65,7 @@
     padding: 0.7rem 1rem;
     outline: none;
     border: none;
-    margin: 1rem auto 2rem;
+    margin: 2rem auto 4rem;
     border: 1px solid;
     border-color: transparent;
     transition: 0.15s ease;
@@ -117,6 +121,7 @@
     }
 
     .hero-desktop {
+      display: block;
       max-width: 500px;
     }
   }

@@ -12,9 +12,11 @@
 </script>
 
 <section class="menu">
-  <button class="menu-close" on:click={handleCloseMenu}>
-    <img src="/images/icon-close-menu.svg" alt="Close menu" />
-  </button>
+  <div class="menu-close-container">
+    <button class="menu-close" on:click={handleCloseMenu}>
+      <img src="/images/icon-close-menu.svg" alt="Close menu" />
+    </button>
+  </div>
   <MenuList />
   <MenuLogin />
 </section>
@@ -27,6 +29,20 @@
   }
 
   .menu-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    background: var(--almost-white);
+    transition: 0.2s ease;
+    border-radius: 10px;
+  }
+
+  .menu-close:hover {
+    border-color: var(--almost-black);
+  }
+
+  .menu-close-container {
     display: flex;
     justify-content: flex-end;
   }

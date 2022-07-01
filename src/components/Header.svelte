@@ -42,7 +42,7 @@
   }
 
   .header-login {
-    display: block;
+    display: none;
   }
 
   @media (min-width: 900px) {

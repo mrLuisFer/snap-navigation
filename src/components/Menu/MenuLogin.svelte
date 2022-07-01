@@ -33,6 +33,7 @@
     margin-top: 0.5rem;
     color: var(--almost-black);
     opacity: 0.5;
+    background: transparent;
   }
 
   .menu-login-btn:hover {
