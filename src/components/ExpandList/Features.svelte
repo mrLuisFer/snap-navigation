@@ -1,12 +1,14 @@
 <script>
   import {slide} from 'svelte/transition';
+  import {clickOutside} from '../../utils/clickOutside';
+  import MenuItem from '../Menu/MenuItem.svelte';
 
   let iconCalendar = 'images/icon-calendar.svg';
   let iconTodolist = 'images/icon-todo.svg';
   let iconReminder = 'images/icon-reminders.svg';
   let iconPlanning = 'images/icon-planning.svg';
-  let showList = false;
 
+  export let showList = false
   const items = [
     {icon: iconTodolist, value: 'Todo List'},
     {icon: iconCalendar, value: 'Calendar'},
@@ -17,10 +19,20 @@
   const handleToggleList = () => {
     showList = !showList;
   };
+
+  const handleCloseList = () => {
+    showList = false;
+  };
 </script>
 
 <div class="container">
-  <div on:click={handleToggleList}><slot /></div>
+  <div
+    on:click={handleToggleList}
+    use:clickOutside
+    on:click_outside={handleCloseList}
+  >
+    <MenuItem withExpand clicked={showList}>Features</MenuItem>
+  </div>
   {#if showList}
     <div class="list-container">
       {#each items as item}

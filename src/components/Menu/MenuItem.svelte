@@ -1,8 +1,7 @@
 <script>
   export let withExpand = false;
   export let listMenuComponent = null;
-
-  let clicked = false;
+  export let clicked = false;
 
   const handleClickIcon = () => {
     clicked = !clicked;
@@ -48,7 +47,6 @@
 
   @media (min-width: 900px) {
     .menu-item {
-      
     }
   }
 </style>

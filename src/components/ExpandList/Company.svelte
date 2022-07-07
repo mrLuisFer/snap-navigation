@@ -1,16 +1,28 @@
 <script>
   import {slide} from 'svelte/transition';
+  import {clickOutside} from '../../utils/clickOutside';
+  import MenuItem from '../Menu/MenuItem.svelte';
 
   const items = ['History', 'Our Team', 'Blog'];
 
-  let showList = false;
+  export let showList = false;
   const handleToggleList = () => {
     showList = !showList;
+  };
+
+  const handleCloseList = () => {
+    showList = false;
   };
 </script>
 
 <div class="container">
-  <div on:click={handleToggleList}><slot /></div>
+  <div
+    on:click={handleToggleList}
+    use:clickOutside
+    on:click_outside={handleCloseList}
+  >
+    <MenuItem withExpand clicked={showList}>Company</MenuItem>
+  </div>
   {#if showList}
     <div class="list-container">
       {#each items as item}

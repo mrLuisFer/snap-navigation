@@ -1,16 +1,12 @@
 <script>
-  import MenuItem from './MenuItem.svelte';
   import FeaturesExpandList from '../ExpandList/Features.svelte';
   import CompanyExpandList from '../ExpandList/Company.svelte';
+  import MenuItem from './MenuItem.svelte';
 </script>
 
 <div class="menu-list">
-  <FeaturesExpandList>
-    <MenuItem withExpand>Features</MenuItem>
-  </FeaturesExpandList>
-  <CompanyExpandList>
-    <MenuItem withExpand>Company</MenuItem>
-  </CompanyExpandList>
+  <FeaturesExpandList />
+  <CompanyExpandList />
   <MenuItem>Careers</MenuItem>
   <MenuItem>About</MenuItem>
 </div>
